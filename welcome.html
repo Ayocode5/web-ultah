@@ -67,17 +67,26 @@
     </footer>
 
     <script>
-      document
-        .getElementById('confirm')
-        .addEventListener('change', function () {
-          if (document.getElementById('confirm').checked) {
-            document.getElementById('open').style.backgroundColor = '#007FFF';
-            document.getElementById('open').style.color = '#FFFFFF';
-          } else {
-            document.getElementById('open').style.backgroundColor = '#a6adb4';
-            document.getElementById('open').style.color = '#787777';
-          }
-        });
+      const btn = document.getElementById('open');
+      const checkbox = document.getElementById('confirm');
+
+      checkIsApprove();
+
+      function checkIsApprove() {
+        if (checkbox.checked) {
+          btn.style.backgroundColor = '#007FFF';
+          btn.style.color = '#FFFFFF';
+          btn.disabled = false;
+        } else {
+          btn.style.backgroundColor = '#a6adb4';
+          btn.style.color = '#787777';
+          btn.disabled = true;
+        }
+      }
+
+      checkbox.addEventListener('change', function () {
+        checkIsApprove();
+      });
     </script>
   </body>
 </html>
