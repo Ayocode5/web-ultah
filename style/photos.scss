@@ -1,0 +1,23 @@
+figure {
+  $photos: 7;
+
+  @for $i from 1 through $photos {
+    &:nth-child(#{$i}) {
+      img {
+        $rotation: (($i - 1)/ ($photos - 1)) - 0.5;
+        transform: scale(0.6) rotate($rotation * 25deg);
+      }
+    }
+  }
+
+  @for $i from 2 through $photos {
+    &:nth-child(#{$i}) {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+
+  img {
+    width: 100vmin;
+  }
+}

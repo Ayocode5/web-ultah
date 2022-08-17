@@ -4,10 +4,104 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=h1, initial-scale=1.0" />
-    <title>Document</title>
+
+    <!-- external style -->
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/photos.css" />
+
+    <title>Happy Birthday</title>
   </head>
   <body>
-    <h1>main page</h1>
+    <header>
+      <img class="header__background" src="./assets/baby_pic.png" alt="baby" />
+      <div class="header__content">
+        <img
+          src="./assets/icon_arrow-left.svg"
+          alt="back"
+          aria-label="back to previous page"
+          class="icon-back"
+        />
+        <div class="content">
+          <img class="icon-tape" src="./assets/icon_tape.svg" alt="tape" />
+          <h1>Frinz Arley</h1>
+          <p>1st Birthday Party</p>
+        </div>
+        <img class="icon-cake" src="./assets/icon_cake.svg" alt="cake" />
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="wrapper__box">
+        <div class="box">
+          <p class="box-title">Date & Time:</p>
+          <p class="box-subtitle">
+            Saturday, <br />17 Sep 2022 | 15:00 - Selesai
+          </p>
+        </div>
+        <div class="box">
+          <p class="box-title">Location:</p>
+          <p class="box-subtitle">Tamarin Nurseries Garden & Cafe</p>
+          <p class="box-more-detail">
+            See Details <img src="./assets/icon_arrow-right.svg" alt="detail" />
+          </p>
+        </div>
+        <div class="box">
+          <p class="box-title">Dresscode:</p>
+          <p class="box-subtitle">Casual Red and Blue</p>
+        </div>
+        <div class="box"></div>
+      </div>
+
+      <img class="icon-flag" src="./assets/icon_flag.svg" alt="flag" />
+
+      <section class="stories">
+        <span class="striped striped-1"></span>
+        <p class="title">STORIES.</p>
+        <span class="striped striped-2"></span>
+
+        <p class="content">
+          On September 17, 2021, at 17:30, God showed his love for the couple
+          Mr. Okta and Mrs. Veronica by giving them a blessing in the form of a
+          son named <br />Frinz Arley.
+        </p>
+      </section>
+
+      <section class="photos">
+        <figure>
+          <img class="photo" src="./assets/photo-1.png" alt="photo 1" />
+        </figure>
+        <figure>
+          <img class="photo" src="./assets/photo-2.png" alt="photo 2" />
+        </figure>
+        <figure>
+          <img class="photo" src="./assets/photo-3.png" alt="photo 3" />
+        </figure>
+        <figure>
+          <img class="photo" src="./assets/photo-4.png" alt="photo 4" />
+        </figure>
+        <figure>
+          <img class="photo" src="./assets/photo-5.png" alt="photo 5" />
+        </figure>
+        <figure>
+          <img class="photo" src="./assets/photo-6.png" alt="photo 6" />
+        </figure>
+        <figure>
+          <img class="photo" src="./assets/photo-7.png" alt="photo 7" />
+        </figure>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script>
+      const photos = document.querySelectorAll('.photos figure');
+
+      photos.forEach((el, index) =>
+        el.addEventListener('click', (e) => {
+          try {
+            photos[index + 1].classList.add('photo-show');
+          } catch (err) {}
+        })
+      );
+    </script>
   </body>
 </html>
- 
