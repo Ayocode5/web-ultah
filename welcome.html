@@ -8,20 +8,19 @@
     <link rel="stylesheet" href="style/welcome.css" />
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <img src="/assets/ribbon.png" alt="ribbon" class="ribbon" />
       <div class="content">
         <div class="img-wrapper">
           <img src="/assets/pic.png" alt="pic" class="content-pic" />
         </div>
         <div class="title">
-          <!-- <h1 class="celebrate-text">LET'S CELEBRATE LET'S CELEBRATE </h1> -->
           <span class="celebrate-text">
             <marquee
               direction="right"
               behaviour="alternate"
               scrollamount="10"
-              width="80%"
+              width="90%"
               >LET'S CELEBRATE LET'S CELEBRATE LET'S CELEBRATE</marquee
             >
           </span>
@@ -37,7 +36,7 @@
               >
             </h1>
           </div>
-          <form action="" class="checkbox">
+          <form class="checkbox">
             <input
               type="checkbox"
               id="confirm"
@@ -59,23 +58,24 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <footer class="footer">
       <p>
         Made with ❤️ By Ayocode.id <br />
         | All Right Reserved.
       </p>
     </footer>
+
     <script>
       document
-        .getElementById("confirm")
-        .addEventListener("change", function () {
-          if (document.getElementById("confirm").checked) {
-            document.getElementById("open").style.backgroundColor = "#007FFF";
-            document.getElementById("open").style.color = "#FFFFFF";
+        .getElementById('confirm')
+        .addEventListener('change', function () {
+          if (document.getElementById('confirm').checked) {
+            document.getElementById('open').style.backgroundColor = '#007FFF';
+            document.getElementById('open').style.color = '#FFFFFF';
           } else {
-            document.getElementById("open").style.backgroundColor = "#a6adb4";
-            document.getElementById("open").style.color = "#787777";
+            document.getElementById('open').style.backgroundColor = '#a6adb4';
+            document.getElementById('open').style.color = '#787777';
           }
         });
     </script>
