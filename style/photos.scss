@@ -13,7 +13,7 @@ figure {
   @for $i from 2 through $photos {
     &:nth-child(#{$i}) {
       opacity: 0;
-      transform: translateX(-100%);
+      transform: translateY(100%);
     }
   }
 
